@@ -1,0 +1,56 @@
+.wrapperForRegistration {
+    display: flex;
+    width: 100%;
+    height: 93vh;
+}
+
+.leftSideRegistration {
+    background-image: url(../../Images/image\ for\ logIn.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 45%;
+    color: white;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 4vh 0 0 10%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+.rightSideRegistration {
+    background-color:  #F6F6F6;
+    width: 60%;
+}
+
+.ContentRegistration {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 15vh;
+    background-color: #F6F6F6;
+
+}
+
+
+
+
+
+
+.btnRegistration{
+    margin: 3vh;
+    font-size: 18px;
+    padding: 2vh 4vw;
+    width: 50%;
+    font-weight: 200;
+    font-family: 'Courier New';
+    color: white;
+    background-color: #2079F7;
+    border-radius: 9px;
+    box-shadow: none;
+    border: none;
+}
+
+.btnRegistration:hover{
+    background-color: #246fd8;
+}

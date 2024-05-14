@@ -1,0 +1,26 @@
+.mainList {
+    display: flex;
+    flex-direction: column;
+    margin-top: 17vh;
+    font-size: 22px;
+    width: 75%;
+    list-style: none;
+}
+
+.mainList>li {
+    margin-top: 2vh;
+    align-items: center;
+    text-align: center;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+ color: white;
+}
+
+.btnCreate {
+
+    align-self: center;
+    
+}

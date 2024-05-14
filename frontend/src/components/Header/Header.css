@@ -1,0 +1,42 @@
+.headerStyle {
+    display: flex;
+    justify-content: space-evenly;
+    height: 8vh;
+    font-size: 20px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.noStyle{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.linkForHeader {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    z-index: 3;
+    align-items: center;
+    color: white;
+
+}
+
+
+.linkForHeader>li {
+    margin-right: 15%;
+    z-index: 3;
+}
+
+
+
+.logo {
+    width: 8vw;
+    height: 5vh;
+    position: relative;
+    top: 0px;
+    left: 2vw;
+    z-index: 3;
+
+}
