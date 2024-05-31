@@ -4,6 +4,6 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   padding: 0;
-  background-image: url(./Images/background.png);
-  background-repeat: no-repeat;
+  /* background-image: url(./Images/background.png);
+  background-repeat: no-repeat; */
 }

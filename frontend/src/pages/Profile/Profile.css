@@ -1,0 +1,70 @@
+.wrapperProfile {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin: 2em;
+    padding-bottom: 5vh;
+    border-radius: 14px;
+}
+
+.wrapperProfile div {
+    margin-top: 3vh;
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+
+.uploadInput {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    color: #ffffff;
+    background-color: rgb(87, 114, 222);
+    padding: 8px 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.uploadInput input {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+}
+
+
+.aboutMeDiv {
+    display: flex;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    margin: 2em;
+    padding-bottom: 5vh;
+    padding-left: 2vw;
+    border-radius: 14px;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.aboutMeInputs {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-evenly;
+
+}
+
+.aboutMeDiv div {
+    margin-bottom: 5vh;
+}
+
+.btnsProfile {
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btnsProfile button {
+    margin-right: 40px;
+}

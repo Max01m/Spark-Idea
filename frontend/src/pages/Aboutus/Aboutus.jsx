@@ -3,6 +3,7 @@ import Header from "../../components/Header/Header";
 import "./Aboutus.css";
 import Button from "@mui/material/Button";
 import NextWeekIcon from "@mui/icons-material/NextWeek";
+import Footer from "../../components/footer/Footer";
 
 const Aboutus = () => {
   return (
@@ -48,6 +49,7 @@ const Aboutus = () => {
           Опробовать наш продукт
         </Button>
       </ul>
+      <Footer/>
     </div>
   );
 };

@@ -1,0 +1,65 @@
+.box {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    font-family: Poppins;
+    box-shadow: 0 0 3px #ddd;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #fff;
+    
+  }
+  .box label {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 10px;
+    width: 100%;
+    height: 100%;
+    color: #bbb;
+    user-select: none;
+    transition: 0.5s;
+  }
+  .box input {
+    min-width: 28vw;
+    font-family: Poppins;
+    padding: 20px 0 5px 10px;
+    border: 0.2px solid rgb(125, 181, 125);
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-size: 1.3em;
+  }
+  .box input:focus + label, .box input:not(:placeholder-shown) + label {
+    transform: translateY(-30%);
+    font-size: 0.6rem;
+  }
+  .box input:not(:placeholder-shown) {
+    border-bottom: 3px solid #1eff0066;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #eee;
+  }
+  
+
+
+  .inputStyle {
+    border: 0;
+    border-bottom: 1px solid black;
+    margin-bottom: 3vh;
+    margin-top: 3vh;
+    width: 50%;
+    font-size: 18px;
+    padding-bottom: 0.5vh;
+}
+
+input:focus {
+  outline: none;
+}

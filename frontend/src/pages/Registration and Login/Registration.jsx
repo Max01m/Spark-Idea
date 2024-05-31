@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../../components/Header/Header";
 import "./Registration.css";
 import "./LogIn.css";
 import { Link } from "react-router-dom";
+import InputForAuth from "../../components/Input/InputForAuth";
+import { registration } from "../../actions/user";
 
 const Registration = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [userName, setUserName] = useState("");
+
   return (
     <div>
       <Header />
@@ -21,14 +27,30 @@ const Registration = () => {
             <p>Регистрация с Google</p>
             <span>или</span>
             <form action="">
-              <input type="text" placeholder="Имя" className="inputStyle" />
-              <input placeholder="Почта" className="inputStyle" type="email" />
-              <input
+              <InputForAuth
+                value={userName}
+                setValue={setUserName}
+                type="text"
+                placeholder="Имя"
+              />
+              <br />
+              <InputForAuth
+                value={email}
+                setValue={setEmail}
+                placeholder="Почта"
+                type="email"
+              />
+              <br />
+              <InputForAuth
+                value={password}
+                setValue={setPassword}
                 type="password"
                 placeholder="Пароль"
-                className="inputStyle"
               />
-              <button className="btnRegistration"> Создать аккаунт </button>
+              <button  
+              onClick={()=>registration(userName,email,password)}
+              
+              className="btnRegistration"> Создать аккаунт </button>
             </form>
             <div className="wrapToLine">
               <span>Уже есть аккаунт?</span>

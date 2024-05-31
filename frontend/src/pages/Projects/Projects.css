@@ -1,0 +1,78 @@
+.projectsDiv {
+    display: flex;
+    flex-direction: row;
+    font-family: Arial, sans-serif;
+    margin-top: 7vh;
+}
+
+
+.profile {
+    text-align: center;
+    width: 20%;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.profile-picture img {
+    width: 60%;
+    border-radius: 50%;
+}
+
+.profile-details {
+    margin-top: 20px;
+}
+
+.profile-details h2, .profile-details p {
+    margin: 5px 0;
+}
+
+.social-links a {
+    display: block;
+    margin-top: 10px;
+}
+
+.about-me {
+    margin-top: 20px;
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.project-highlight {
+    display: flex;
+    align-items: center;
+}
+
+.project-highlight img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.project-highlight p {
+    flex: 1;
+}
+
+.projects {
+    margin-top: 20px;
+}
+
+.project-thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.thumbnail {
+    width: 24%;
+    margin: 0.5%;
+}
+
+.thumbnail img {
+    width: 100%;
+}
+
+.certificates {
+    margin-top: 20px;
+}

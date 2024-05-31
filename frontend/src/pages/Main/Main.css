@@ -16,11 +16,14 @@
 .mainContainer {
     display: flex;
     flex-direction: column;
- color: white;
+    color: rgb(19, 19, 19);
+    height: 86vh;
+    margin-top: 5vh;
+    font-size: 22px;
 }
 
 .btnCreate {
 
     align-self: center;
-    
+
 }

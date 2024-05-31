@@ -3,10 +3,11 @@ import Header from "../../components/Header/Header";
 import "./Main.css";
 import Button from "@mui/material/Button";
 import NextWeekIcon from "@mui/icons-material/NextWeek";
+import Footer from "../../components/footer/Footer";
 
 const Main = () => {
   return (
-    <div>
+    <div  >
       <Header />
       <div className="mainContainer">
         <ul className="mainList">
@@ -24,6 +25,8 @@ const Main = () => {
           Создать Портфолио
         </Button>
       </div>
+
+      <Footer/>
     </div>
   );
 };

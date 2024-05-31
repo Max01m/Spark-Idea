@@ -1,9 +1,20 @@
-import React from "react";
+import { useState, } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import "./LogIn.css";
+import InputForAuth from "../../components/Input/InputForAuth";
+import { useDispatch } from "react-redux";
+import { login } from "../../actions/user";
+
+
+
 
 const LogIn = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
+
+
   return (
     <div>
       <Header />
@@ -15,21 +26,35 @@ const LogIn = () => {
         </div>
         <div className="rightSideLogIn">
           <div className="ContentLogIn">
-            <h1 >Добро пожаловать!</h1>
+            <h1>Добро пожаловать!</h1>
             <span>Рады вас видеть!</span>
             <p>Войти с помощь Google</p>
             <span>или</span>
-            <form action="">
-              <input placeholder='Почта' className='inputStyle' type="email" /> <br />
-              <input type="password" placeholder='Пароль' className='inputStyle' />
-              <div className='wrapToLine' >
+            <form >
+              <InputForAuth
+                value={email}
+                setValue={setEmail}
+                placeholder="Почта"
+                type="email"
+              />{" "}
+              <br />
+              <InputForAuth
+                value={password}
+                setValue={setPassword}
+                type="password"
+                placeholder="Пароль"
+              />
+              <div className="wrapToLine">
                 <input type="checkbox" />
                 <span>Запомнить на 30 дней</span>
                 <span>Забыли пароль?</span>
               </div>
-              <button className='btnLogIn' > Войти </button>
+              <button
+              onClick={()=>{ dispatch(login(email,password))
+              }}
+              className="btnLogIn"> Войти </button>
             </form>
-            <div className='wrapToLine' >
+            <div className="wrapToLine">
               <span>Новый пользователь?</span>
               <span>
                 <Link to="/regis">Зарегистрироваться</Link>

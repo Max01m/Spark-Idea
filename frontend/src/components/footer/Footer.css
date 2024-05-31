@@ -1,0 +1,33 @@
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    position: static;
+    bottom: 0;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    width: 100%;
+    
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-right {
+   margin-left: 5vh;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-top: 2.5vh;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
