@@ -1,19 +1,43 @@
-import { useState, } from "react";
-import { Link } from "react-router-dom";
-import Header from "../../components/Header/Header";
-import "./LogIn.css";
-import InputForAuth from "../../components/Input/InputForAuth";
-import { useDispatch } from "react-redux";
-import { login } from "../../actions/user";
-
-
-
+import React, { useState, useEffect } from 'react';
+import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
+import Header from '../../components/Header/Header';
+import InputForAuth from '../../components/Input/InputForAuth';
+import { useDispatch, useSelector } from 'react-redux';
+import { login, logout } from './../../reducers/store';
+import './LogIn.css';
 
 const LogIn = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const dispatch = useDispatch();
+  const { user, isAuth, status, error } = useSelector((state) => state.auth);
 
+  useEffect(() => {
+    if (isAuth && !error) {
+      Swal.fire({
+        icon: 'success',
+        title: 'Успешная авторизация!',
+      });
+    }
+  }, [isAuth, error]);
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    dispatch(login({ email, password }))
+      .unwrap()
+      .catch((err) => {
+        Swal.fire({
+          icon: 'error',
+          title: 'Ошибка!',
+          text: err || 'Что-то пошло не так. Пожалуйста, попробуйте еще раз.',
+        });
+      });
+  };
+
+  const handleLogout = () => {
+    dispatch(logout());
+  };
 
   return (
     <div>
@@ -28,15 +52,15 @@ const LogIn = () => {
           <div className="ContentLogIn">
             <h1>Добро пожаловать!</h1>
             <span>Рады вас видеть!</span>
-            <p>Войти с помощь Google</p>
+            <p>Войти с помощью Google</p>
             <span>или</span>
-            <form >
+            <form onSubmit={handleLogin}>
               <InputForAuth
                 value={email}
                 setValue={setEmail}
                 placeholder="Почта"
                 type="email"
-              />{" "}
+              />{' '}
               <br />
               <InputForAuth
                 value={password}
@@ -49,15 +73,20 @@ const LogIn = () => {
                 <span>Запомнить на 30 дней</span>
                 <span>Забыли пароль?</span>
               </div>
+             
+              {error && <p>{error}</p>}
               <button
-              onClick={()=>{ dispatch(login(email,password))
-              }}
-              className="btnLogIn"> Войти </button>
+                type="submit"
+                disabled={status === 'loading'}
+                className="btnLogIn"
+              >
+                Войти
+              </button>
             </form>
             <div className="wrapToLine">
               <span>Новый пользователь?</span>
               <span>
-                <Link to="/regis">Зарегистрироваться</Link>
+                <Link to="/registration">Зарегистрироваться</Link>
               </span>
             </div>
           </div>

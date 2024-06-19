@@ -6,16 +6,28 @@ import Profile from "./pages/Profile/Profile";
 import Projects from "./pages/Projects/Projects";
 import LogIn from "./pages/Registration and Login/LogIn";
 import Registration from "./pages/Registration and Login/Registration";
+import ProtectedRoute from "./ProtectedRoute";
 
 function App() {
+
+
+
+  
   return (
     <div>
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/aboutus" element={<Aboutus />} />
         <Route path="/projects" element={<Projects />} />
-        <Route path="/logIn" element={<LogIn />} />
-        <Route path="/regis" element={<Registration />} />
+        <Route
+          path="/login"
+          element={
+            <ProtectedRoute>
+              <LogIn />
+            </ProtectedRoute>
+          }
+        />
+        <Route path="/registration" element={<Registration />} />
         <Route path="/profile" element={<Profile />} />
    
       </Routes>
